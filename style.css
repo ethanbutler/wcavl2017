@@ -1,0 +1,170 @@
+/*
+  Theme Name: WordSockets Demo
+  Author: Ethan Butler
+  Author URI: https://github.com/ethanbutler
+  Version: 1.0
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Bevan|Nunito:200,400,700,900');
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: #EEE;
+  padding: 3em 0 0;
+}
+
+.posts {
+  max-width: 970px;
+  margin: 0 auto 10em;
+}
+
+.post {
+  padding: 4em 3em 3em;
+  margin: 0 0 5em;
+  border-left: 10px solid black;
+  border-radius: 15px;
+  box-shadow: 0 .5em 2em rgba(50,50,50,.05);
+  text-align: justify;
+  background: #FFF;
+}
+
+.post:after {
+  content: '';
+  width: 100%;
+  display: inline-block;
+}
+
+.post-main {
+  width: 65%;
+  display: inline-block;
+}
+
+.post-comments {
+  width: 30%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.post-header {
+  margin: 0 0 1em;
+}
+
+.post-title {
+  margin: 0 0 3px;
+  font-family: 'Bevan', cursive;
+  font-size: 32px;
+  letter-spacing: 1px;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+.post-date,
+.comment-date {
+  font-weight: 200;
+  font-size: 12px;
+  color: #555;
+}
+
+.post-date {
+  margin-left: .5em;
+}
+
+.post-dateEdit {
+  background: #FFF731;
+  color: #777;
+  line-height: 1;
+}
+
+.post-content {
+  padding: 0 5em 0 0;
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 200;
+}
+
+.comments-list {
+  max-height: 25em;
+  overflow: scroll;
+  margin: 0 0 2em;
+  padding: 0;
+  list-style: none;
+  box-shadow: 0 .5em 2em rgba(50,50,50,.05);
+}
+
+.comment {
+  margin: 0 0 1em;
+  padding: 1em 1em 0;
+  border-top: 1px solid #DDD;
+  text-align: left;
+}
+
+.commentNew-input {
+  border: none;
+  height: 4em;
+  display: block;
+  width: 100%;
+  font-size: 16px;
+}
+
+.commentNew-submit {
+  display: block;
+  padding: .5em 0;
+  margin: 0 0 1em;
+  font-size: 16px;
+  width: 100%;
+  border: none;
+  background: none;
+  font-family: 'Bevan', cursive;;
+}
+
+.comment-body {
+  font-weight: 200;
+}
+
+.post--new {
+  border-color: #69FFBE;
+}
+
+.post--updated {
+  border-color: #FFF731;
+}
+
+.post--isBeingEdited {
+  border-color: #FF7A56;
+}
+
+.post-editStatus {
+  display: inline-block;
+  background: #FF7A56;
+  line-height: 1;
+  animation: in .5s ease-in-out 1;
+}
+
+.alert-new {
+  position: fixed;
+  pointer-events: none;
+  animation: dip 4s ease-in-out 1;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: .5em 1em;
+  text-align: center;
+  z-index: 1;
+  background: #000;
+  color: #FFF;
+}
+
+@keyframes dip {
+  0%   { top: -3em; opacity: 0; }
+  10%  { top: 1em; opacity: 1; }
+  90%  { top: 1em; opacity: 1; }
+  100% { top: -3em; opacity: 0; }
+}
+
+@keyframes in {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+#wpadminbar {
+  display: none;
+}
